@@ -4,6 +4,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+	    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+            touch-action-delay: none;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+
+        canvas {
+            touch-action-delay: none;
+            touch-action: none;
+            -ms-touch-action: none;
+        }
+    </style>
         <script>
             (function() {
                 (function() {
@@ -3560,7 +3581,17 @@
 <link rel="stylesheet" type="text/css" href="css/verifier.css">
     </head>
     <body dir="ltr">
+	    <!-- The canvas must be inside a div called c2canvasdiv -->
+<div id="c2canvasdiv">
+
+    <div style="position:fixed; width:100%; height:50px; background-color:#2121218c; font-weight: bold; font-size: 40px; bottom:0px; ">
+        <span style="display:inline-block"> Chest 1: <span id="timer1" style="color:green;"> 0.00 </span> </span> ||
+        <span style="display:inline-block"> Chest 2: <span id="timer2" style="color:green;"> 0.00 </span> </span> ||
+        <span style="display:inline-block"> WR: <span id="wr" style="color:green;"> 0.00 </span> </span> ||
+    </div>
+
         <canvas id="screen"></canvas>
+</div>
         <div id="ui"></div>
         <div id="transition-layer"></div>
         <script defer="" src="lib/ammo.js"></script>
@@ -3571,6 +3602,7 @@
         <script>
             window.google.csi.tickDl();
         </script>
+	    <script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/jquery-2.1.1.min.js"></script>
 <script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/coffee.js"></script>
 <script>
     window.tool = {};
@@ -3588,7 +3620,9 @@
         window.autosplitter.onUpdate(time);
     };
 </script>
+<script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/c2runtime.js"></script>
 
+<script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/c2webappstart.js"></script>
     </body>
 </html>
 
