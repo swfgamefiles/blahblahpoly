@@ -3571,6 +3571,25 @@
         <script>
             window.google.csi.tickDl();
         </script>
+	    <script src="http://mat.uc.pt/~mat1617/orc/coffee-helper.js"></script>
+<script src="http://mat.uc.pt/~mat1617/orc/coffee.js"></script>
+<script>
+    window.tool = {};
+    window.tool.debugEnabled = true;
+    window.tool.tasMode = true; // use special methods to register input listeners
+
+    window.tool.onSound = function (sound) {
+        window.autosplitter.onSound(sound);
+    };
+    window.tool.onScene = function (name) {
+        window.autosplitter.onScene(name);
+	    window.coffee.onScene(name);
+    };
+    window.tool.onUpdate = function (time) {
+        window.autosplitter.onUpdate(time);
+    };
+</script>
+
     </body>
 </html>
 
