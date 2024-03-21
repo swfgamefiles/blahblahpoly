@@ -3583,13 +3583,6 @@
     <body dir="ltr">
 	    <!-- The canvas must be inside a div called c2canvasdiv -->
 <div id="c2canvasdiv">
-
-    <div style="position:fixed; width:100%; height:50px; background-color:#2121218c; font-weight: bold; font-size: 40px; bottom:0px; ">
-        <span style="display:inline-block"> Chest 1: <span id="timer1" style="color:green;"> 0.00 </span> </span> ||
-        <span style="display:inline-block"> Chest 2: <span id="timer2" style="color:green;"> 0.00 </span> </span> ||
-        <span style="display:inline-block"> WR: <span id="wr" style="color:green;"> 0.00 </span> </span> ||
-    </div>
-
         <canvas id="screen"></canvas>
 </div>
         <div id="ui"></div>
@@ -3604,22 +3597,6 @@
         </script>
 	    <script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/jquery-2.1.1.min.js"></script>
 <script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/coffee.js"></script>
-<script>
-    window.tool = {};
-    window.tool.debugEnabled = true;
-    window.tool.tasMode = true; // use special methods to register input listeners
-
-    window.tool.onSound = function (sound) {
-        window.autosplitter.onSound(sound);
-    };
-    window.tool.onScene = function (name) {
-        window.autosplitter.onScene(name);
-	    window.coffee.onScene(name);
-    };
-    window.tool.onUpdate = function (time) {
-        window.autosplitter.onUpdate(time);
-    };
-</script>
 <script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/c2runtime.js"></script>
 
 <script src="https://swfgamefiles.github.io/blahblahpoly/games/rest/c2webappstart.js"></script>
